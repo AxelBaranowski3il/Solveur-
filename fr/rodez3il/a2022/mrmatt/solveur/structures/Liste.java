@@ -3,7 +3,7 @@ package fr.rodez3il.a2022.mrmatt.solveur.structures;
 public interface Liste<T> {
 
 	/**
-	 * Ajoute un élément à la liste.
+	 * Ajoute un élément à la liste.s
 	 * @param element l'élément à ajouter
 	 */
 	void ajouter(T element);
