@@ -12,6 +12,7 @@ public class ListeTableau<E> implements Liste<E> {
 
     @Override
     public void ajouter(E element) {
+        boolean condition = false;
         if (tab[tab.length - 1] != null){
             Object [] resTab = tab;
             tab = new Object[tab.length*2];
@@ -19,20 +20,36 @@ public class ListeTableau<E> implements Liste<E> {
                 tab [i] = resTab[i];
             }
         }
-        for (int i = 0; i < tab.length; i++){
-            if (tab[i] == null)
+        for (int i = 0; i < tab.length && !condition; i++){
+            if (tab[i] == null){
+                condition = true;
                 tab[i] = element;
+            }
         }
     }
 
     @Override
     public boolean estVide() {
-        return tab.length == 0;
+        boolean condition = true;
+        for (int i = 0; i < tab.length && condition; i++){
+            if (tab[i] != null)
+                condition = false;
+        }
+        return condition;
     }
 
     @Override
     public int taille() {
-        return tab.length;
+        int compteur = 0;
+        boolean condition = false;
+        for (int i = 0; i < tab.length && !condition; i++){
+            if (tab[i] == null){
+                condition = false;
+                compteur--;
+            }
+            compteur++;
+        }
+        return compteur;
     }
 
     @Override

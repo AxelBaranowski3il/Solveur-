@@ -10,12 +10,20 @@ public class ListeChainee<T> implements Liste<T> {
             this.donnee = donnee;
             this.suivant = suivant;
         }
+
+        public void setDonnee(T donnee){this.donnee = donnee;}
+
+        public T getDonnee() {return donnee;}
     }
 
     private Maillon maillon;
 
     private int nbMaillon;
 
+    public ListeChainee() {
+        maillon = new Maillon(null, null);
+        nbMaillon = 0;
+    }
     public ListeChainee(Maillon maillon){
         this.maillon = maillon;
         nbMaillon = 0;
@@ -37,15 +45,20 @@ public class ListeChainee<T> implements Liste<T> {
 
     @Override
     public int taille() {
-        int i = 0;
-        while (maillon.suivant != null)
+        int i = 1;
+        Maillon sauvMaill = this.maillon;
+        while (sauvMaill.suivant != null){
             i++;
+            sauvMaill = sauvMaill.suivant;
+        }
         return i;
     }
 
     @Override
     public T enlever(int i) {
-        return null;
+        if (this.element(i) == null)
+            return null;
+        Maillon maill = element(i);
     }
 
     @Override
@@ -63,10 +76,15 @@ public class ListeChainee<T> implements Liste<T> {
     @Override
     public boolean contient(T e) {
         boolean condition = false;
+        boolean conditionBoucle = false;
         Maillon resMaill = maillon;
-        while (resMaill.suivant != null && !condition){
+        while (!conditionBoucle && !condition){
             condition = resMaill.donnee.equals(e);
-            resMaill = resMaill.suivant;
+            if (resMaill.suivant == null){
+                conditionBoucle = true;
+            } else {
+                resMaill = resMaill.suivant;
+            }
         }
         return condition;
     }
