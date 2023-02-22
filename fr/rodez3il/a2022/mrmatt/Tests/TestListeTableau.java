@@ -1,7 +1,19 @@
+/**
+ * TestListeTableau.java
+ */
 package fr.rodez3il.a2022.mrmatt.Tests;
 
 import fr.rodez3il.a2022.mrmatt.solveur.structures.ListeTableau;
 
+/**
+ * Classe de test concernant la classe ListeTableau
+ * Tests:
+ * - estVide
+ * - ajouter
+ * - taille
+ * - contient
+ * - enlever
+ */
 public class TestListeTableau {
 
     public static void main(String[] args){

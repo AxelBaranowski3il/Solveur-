@@ -1,7 +1,18 @@
+/**
+ * TestListeChainee.java
+ */
 package fr.rodez3il.a2022.mrmatt.Tests;
 
 import fr.rodez3il.a2022.mrmatt.solveur.structures.*;
 
+/**
+ * Classe de test concernant la classe ListeChainee
+ * Tests:
+ * - ajouter
+ * - taille
+ * - contient
+ * - enlever
+ */
 public class TestListeChaine {
     public static void main(String[] args){
         ListeChainee liste = new ListeChainee<>();
