@@ -52,7 +52,6 @@ public class Noeud {
 
     /**
      * Accesseur de l'attribut visite
-     *
      * @return visite
      */
     public boolean getVisite() {
@@ -61,7 +60,6 @@ public class Noeud {
 
     /**
      * Accesseur de l'attribut haut
-     *
      * @return visite
      */
     public Niveau getNiveau() {
@@ -70,7 +68,6 @@ public class Noeud {
 
     /**
      * Accesseur de l'attribut Fils
-     *
      * @return visite
      */
     public Noeud[] getFils() {
@@ -79,7 +76,6 @@ public class Noeud {
 
     /**
      * Accesseur de l'attribut chaineCommande
-     *
      * @return visite
      */
     public String getChaineCommande() {
@@ -88,7 +84,6 @@ public class Noeud {
 
     /**
      * Redéfinition de la méthode equals
-     *
      * @param otherObj l'objet à comparer avec le noeud
      * @return true si égal sinon false
      */
