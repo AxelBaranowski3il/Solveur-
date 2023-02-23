@@ -1,3 +1,6 @@
+/**
+ * Solveur.java
+ */
 package fr.rodez3il.a2022.mrmatt.solveur;
 
 import fr.rodez3il.a2022.mrmatt.solveur.structures.DictionnaireChaine;
@@ -5,8 +8,18 @@ import fr.rodez3il.a2022.mrmatt.sources.Niveau;
 
 import java.util.LinkedList;
 
+/**
+ * Classe solveur permettant de trouver la solution
+ * au niveau si elle est disponible
+ * @author Axel Baranowski
+ */
 public class Solveur {
 
+	/**
+	 * methode qui permet de trouver la solution d'un niveau
+	 * @param niveau à analyser
+	 * @return la solution si elle est existante ou null
+	 */
 	public static String trouverSolution(Niveau niveau) {
 		DictionnaireChaine<String, Noeud> dict = new DictionnaireChaine<>();
 		// Initialisation du Noeud sans commande

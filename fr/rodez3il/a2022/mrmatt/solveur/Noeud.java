@@ -1,10 +1,22 @@
+/**
+ * Noeud.java
+ */
 package fr.rodez3il.a2022.mrmatt.solveur;
 
 import fr.rodez3il.a2022.mrmatt.solveur.structures.DictionnaireChaine;
 import fr.rodez3il.a2022.mrmatt.sources.Commande;
 import fr.rodez3il.a2022.mrmatt.sources.Niveau;
-import fr.rodez3il.a2022.mrmatt.solveur.structures.ListeChainee;
 
+/**
+ * Classe Noeud
+ * - getVisite
+ * - getNiveau
+ * - getFils
+ * - getChainCommande
+ * - equals
+ * - calculFils
+ * @author Axel Baranowski
+ */
 public class Noeud {
     // Référence vers le dictionnaire des configurations connues
     private DictionnaireChaine<String, Noeud> dict;
@@ -22,6 +34,14 @@ public class Noeud {
 
     private String chaineCommande;
 
+    /**
+     * Constructeur de Noeud
+     * @param dict
+     * @param niveau
+     * @param fils
+     * @param chaine
+     * @param visite
+     */
     public Noeud(DictionnaireChaine<String, Noeud> dict, Niveau niveau, Noeud[] fils, String chaine, boolean visite) {
         this.dict = dict;
         this.niveau = niveau;
@@ -37,15 +57,6 @@ public class Noeud {
      */
     public boolean getVisite() {
         return this.visite;
-    }
-
-    /**
-     * mutateur de l'attribut visite
-     *
-     * @return visite
-     */
-    public void setVisite(boolean newVisite) {
-        this.visite = newVisite;
     }
 
     /**
