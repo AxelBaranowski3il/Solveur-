@@ -1,0 +1,6 @@
+* Question : quel est le type du tableau à utiliser ?
+Il faut utiliser le type Object.
+
+* Question : Selon vous, quelles sont les différences majeures entre ListeTableau et ListeChainee ?
+ListeTableau, on utilise un tableau tandis que ListeChainee, on utilise des maillons.
+
